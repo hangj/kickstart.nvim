@@ -1,0 +1,19 @@
+vim.api.nvim_create_user_command('Hello', function()
+  pcall(function()
+    vim.notify 'Hello World'
+  end)
+end, {})
+
+vim.api.nvim_create_user_command('HangjNoConcealCodeBlock', function()
+  pcall(function()
+    vim.cmd 'set conceallevel=0'
+  end)
+end, {})
+
+vim.api.nvim_create_user_command('HangjConcealCodeBlock', function()
+  pcall(function()
+    vim.cmd 'set conceallevel=2'
+  end)
+end, {})
+
+return {}
